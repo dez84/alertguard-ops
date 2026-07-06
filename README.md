@@ -31,3 +31,27 @@ cd alertguard-ops
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+
+2. Execute the Full Pipeline Loop
+Run the central entry point script to validate localized definitions, ingest passing components, and compile the global documentation catalog:
+python main.py
+
+🛡️ Governance Enforcement Logs Example
+
+================================================================
+=== Launching AlertGuard-Ops CI/CD Integration Engine ===
+================================================================
+
+--- Starting Alert Guard Governance Scan (2 files found) ---
+[DB] Central alert inventory successfully initialized at: /home/dez/alertguard-ops/alert_inventory.db
+-----------------------------------------------------------------
+[PASS] checkout_service_alerts.yaml: Alert definition meets corporate standards.
+[DB LOG] Successfully archived/updated policy state for alert: 'Checkout_HTTP_5xx_Spike'
+
+[FAIL] payment_service_alerts.yaml:
+  - CRITICAL VIOLATION: Routes to '24x7_Eyes_on_Glass' but lacks a 'runbook_url'.
+  - Insufficient operational impact description. Must be at least 15 characters.
+-----------------------------------------------------------------
+
+[FAILURE] Governance violations detected on incoming configurations.
+=== Pipeline Execution Halted: Catalog Generation Skipped ===
