@@ -1,0 +1,6 @@
+alert_name: "Payment_DB_Latency"
+service_owner: "FinTech Payments Team"
+severity: "CRITICAL"
+routing_target: "24x7_Eyes_on_Glass"
+runbook_url: "https://github.com/your-username/alertguard-ops/blob/main/templates/runbook_template.md"
+operational_impact: "Database latency exceeds 2500ms, causing cascading timeouts on incoming card payment checkouts."

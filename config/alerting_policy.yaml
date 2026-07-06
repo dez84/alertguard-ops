@@ -1,0 +1,30 @@
+governance_metadata:
+  framework: "AlertGuard-Ops v1.0"
+  organization: "Enterprise Operations Command Center"
+  last_audited: "2026-07-06"
+
+enforcement_rules:
+  required_fields:
+    - alert_name
+    - service_owner
+    - severity
+    - routing_target
+    - runbook_url
+    - operational_impact
+  
+  eyes_on_glass_mandate:
+    target: "24x7_Eyes_on_Glass"
+    requires_runbook: true
+    min_impact_description_length: 15
+
+allowed_severities:
+  - CRITICAL
+  - HIGH
+  - MEDIUM
+  - LOW
+
+allowed_routing_targets:
+  - 24x7_Eyes_on_Glass
+  - On_Call_Engineering
+  - Ticket_Only
+  - Suppressed

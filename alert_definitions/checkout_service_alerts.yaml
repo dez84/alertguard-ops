@@ -1,0 +1,6 @@
+alert_name: "Checkout_HTTP_5xx_Spike"
+service_owner: "E-Commerce Core Team"
+severity: "CRITICAL"
+routing_target: "24x7_Eyes_on_Glass"
+runbook_url: "https://github.com/your-username/alertguard-ops/blob/main/templates/runbook_template.md"
+operational_impact: "Customers are experiencing HTTP 500 errors during checkout, preventing successful revenue transactions."
